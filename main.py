@@ -32,12 +32,12 @@ def parsing(page):
         # m_name = tag.find('a', class_='ui_colorG').get_text()
         i = i + 1
         m_name = tag.find('a', class_='ui_colorG').get_text()
-        m_rating_score = tag.find('div', class_='renshu').get_text()
+        # m_rating_score = tag.find('div', class_='renshu').get_text() # 围观人数
         m_url = tag.find('a').get('href')
         m_people = tag.find('a', style="color: #F35B4F;").get_text()
         # print(m_name + "\n" + u + m_url + " " + m_people + "\n围观人数：" + m_rating_score) #已经移动到下一行
         # text1 = text1 + "\n" + m_name + "\n" + u + m_url + " " + m_people + "\n围观人数：" + m_rating_score #空格太大
-        text1 = text1 + m_name + "\n" + u0 + m_url + " " + m_people + "\n围观人数：" + m_rating_score
+        text1 = text1 + m_name + "\n" + u0 + m_url + " " + m_people + "\n\n"
         # 此处输出前六个页面的数据
         if i == 10:
             print(text1 )
